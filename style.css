@@ -1,0 +1,67 @@
+
+/* === Global Waybar === */
+* {
+  font-family: "JetBrainsMono Nerd Font", monospace;
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  margin: 0;
+}
+
+window#waybar {
+  background-color: transparent; /* transparent bar */
+  color: #cdd6f4;
+  border-bottom: none; /* optional: remove border */
+}
+
+/* === Workspaces === */
+#workspaces {
+  margin: 2px 6px;
+}
+
+#workspaces button {
+  color: #a6adc8;
+  padding: 0 8px;
+  margin: 0 3px;
+  border-radius: 8px;
+  background-color: #313244; /* dark module background */
+}
+
+#workspaces button.active {
+  background-color: #89b4fa;
+  color: #1e1e2e;
+}
+
+/* === Right Modules === */
+#clock,
+#custom-power {
+  background-color: #313244; /* dark background */
+  color: #cdd6f4;
+  padding: 4px 10px;
+  margin: 0 6px;
+  border-radius: 10px;
+}
+
+/* === Bluetooth, Network, Volume Island === */
+#bluetooth,
+#network,
+#pulseaudio { 
+  background-color: #313244;
+  padding: 5px 10px;
+  margin: 0;
+}
+
+/* Rounded island edges */
+#bluetooth { border-radius: 10px 0 0 10px; margin-right: 0; }
+#network { border-radius: 0; margin: 0; }
+#pulseaudio { border-radius: 0 10px 10px 0; margin-left: 0; }
+
+/* Individual icon colors */
+#bluetooth { color: #89dceb; }
+#network { color: #fab387; }
+#pulseaudio { color: #f9e2af; }
+#clock { color: #cba6f7; }
+#custom-power { color: #f38ba8; font-weight: bold; }
+

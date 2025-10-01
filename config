@@ -1,0 +1,42 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 32, 
+  "modules-right": ["bluetooth","network","pulseaudio","clock","custom/power"],
+  "modules-left" : ["hyprland/workspaces"],
+
+  "custom/power":
+  {
+  	"format":"\udb81\udc25",
+	"tooltip":"Power Menu",
+	"on-click":"systemctl poweroff",
+
+  },
+  "bluetooth":
+  {
+  	"format":"\udb80\udcaf {device_alias}",
+	"format-disconnected": " Nothing connected",
+  	"format-disabled": "󰂲 Bluetooth off"
+  },
+
+  "network":
+  {
+	"format-wifi":"\udb81\udda9 {essid}",
+	"format-ethernet":"\udb80\ude00",
+	"format-disconnected":"\udb85\udebc",
+  },
+  "hyprland/workspaces": 
+  {
+	"all-outputs":true,
+  },
+
+  "clock": 
+  {
+    "format": "{:%d-%m-%Y %I:%M%p}"
+  },
+
+  "pulseaudio": 
+  {
+    "format": "\uf027 {volume}%"
+  } 
+}
