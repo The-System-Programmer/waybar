@@ -2,8 +2,15 @@
   "layer": "top",
   "position": "top",
   "height": 32, 
-  "modules-right": ["bluetooth","network","pulseaudio","clock","custom/power"],
+  "modules-right": ["bluetooth","network","pulseaudio","clock","custom/reboot","custom/power"],
   "modules-left" : ["hyprland/workspaces"],
+
+  "custom/reboot":
+  {
+	"format":"\uead2",
+	"tooltip":"Reboot",
+	"on-click":"systemctl reboot",
+  },
 
   "custom/power":
   {
@@ -12,11 +19,12 @@
 	"on-click":"systemctl poweroff",
 
   },
+
   "bluetooth":
   {
-  	"format":"\udb80\udcaf {device_alias}",
-	"format-disconnected": " Nothing connected",
-  	"format-disabled": "󰂲 Bluetooth off"
+    "format-connected": "󰂯 {device_alias}", 
+    "format-on": "󰂯 Disconnected",
+    "format-disabled": "󰂲 Off"
   },
 
   "network":

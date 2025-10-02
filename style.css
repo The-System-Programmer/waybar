@@ -1,4 +1,3 @@
-
 /* === Global Waybar === */
 * {
   font-family: "JetBrainsMono Nerd Font", monospace;
@@ -13,7 +12,7 @@
 window#waybar {
   background-color: transparent; /* transparent bar */
   color: #cdd6f4;
-  border-bottom: none; /* optional: remove border */
+  border-bottom: none;
 }
 
 /* === Workspaces === */
@@ -34,11 +33,10 @@ window#waybar {
   color: #1e1e2e;
 }
 
-/* === Right Modules === */
-#clock,
-#custom-power {
-  background-color: #313244; /* dark background */
-  color: #cdd6f4;
+/* === Right Modules (clock) === */
+#clock {
+  background-color: #313244;
+  color: #cba6f7;
   padding: 4px 10px;
   margin: 0 6px;
   border-radius: 10px;
@@ -53,15 +51,41 @@ window#waybar {
   margin: 0;
 }
 
-/* Rounded island edges */
-#bluetooth { border-radius: 10px 0 0 10px; margin-right: 0; }
-#network { border-radius: 0; margin: 0; }
-#pulseaudio { border-radius: 0 10px 10px 0; margin-left: 0; }
+#bluetooth { 
+  border-radius: 10px 0 0 10px; 
+  margin-right: 0; 
+  color: #89dceb;
+}
 
-/* Individual icon colors */
-#bluetooth { color: #89dceb; }
-#network { color: #fab387; }
-#pulseaudio { color: #f9e2af; }
-#clock { color: #cba6f7; }
-#custom-power { color: #f38ba8; font-weight: bold; }
+#network { 
+  border-radius: 0; 
+  margin: 0; 
+  color: #fab387;
+}
+
+#pulseaudio { 
+  border-radius: 0 10px 10px 0; 
+  margin-left: 0; 
+  color: #f9e2af;
+}
+
+/* === Reboot + Power Island === */
+#custom-reboot,
+#custom-power {
+  background-color: #313244;
+  color: #f38ba8;
+  padding: 4px 10px;
+  margin: 0;
+  font-weight: bold;
+}
+
+#custom-reboot { 
+  border-radius: 10px 0 0 10px; 
+  margin-right: 0; 
+}
+
+#custom-power { 
+  border-radius: 0 10px 10px 0; 
+  margin-left: 0; 
+}
 
